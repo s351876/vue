@@ -46,11 +46,10 @@
                   }
               )
               this.name = '';
-              this.$forceUpdate();
+              this.$validator.reset();
           },
           removeProduct(index){
               this.products.splice(index, 1);
-              this.$forceUpdate();
           },
           onSubmit() {
               this.$validator.validateAll().then(result => {
